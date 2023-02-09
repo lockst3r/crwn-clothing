@@ -1,6 +1,11 @@
 import './category-item.styles.scss';
+import { Category } from '../../types'
 
-const CategoryItem = ({ category }) => {
+interface CategoryItemProps {
+  category: Category
+}
+
+const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
   const { imageUrl, title } = category;
   return (
     <div className='category-container'>
